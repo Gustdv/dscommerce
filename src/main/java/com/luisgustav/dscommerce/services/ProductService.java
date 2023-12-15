@@ -1,7 +1,9 @@
 package com.luisgustav.dscommerce.services;
 
+import com.luisgustav.dscommerce.dto.CategoryDTO;
 import com.luisgustav.dscommerce.dto.ProductDTO;
 import com.luisgustav.dscommerce.dto.ProductMinDTO;
+import com.luisgustav.dscommerce.entities.Category;
 import com.luisgustav.dscommerce.entities.Product;
 import com.luisgustav.dscommerce.repositories.ProductRepository;
 
@@ -80,6 +82,12 @@ public class ProductService {
         entity.setPrice(dto.getPrice());
         entity.setImgUrl(dto.getImgUrl());
 
+        entity.getCategory().clear();
+        for(CategoryDTO catDto : dto.getCategories()) {
+            Category cat =  new Category();
+            cat.setId(catDto.getId());
+            entity.getCategory().add(cat);
+        }
     }
 
 }
