@@ -1,6 +1,7 @@
 package com.luisgustav.dscommerce.services;
 
 import com.luisgustav.dscommerce.dto.ProductDTO;
+import com.luisgustav.dscommerce.dto.ProductMinDTO;
 import com.luisgustav.dscommerce.entities.Product;
 import com.luisgustav.dscommerce.repositories.ProductRepository;
 
@@ -34,9 +35,9 @@ public class ProductService {
     }
 
     @Transactional(readOnly = true)
-    public Page<ProductDTO> findAll(String name, Pageable pageable) {
+    public Page<ProductMinDTO> findAll(String name, Pageable pageable) {
          Page<Product> result = repository.searchByName(name, pageable);
-         return result.map(x -> new ProductDTO(x));
+         return result.map(x -> new ProductMinDTO(x));
 
     }
 
