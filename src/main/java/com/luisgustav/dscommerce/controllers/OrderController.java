@@ -37,7 +37,7 @@ public class OrderController {
 
     @PreAuthorize("hasAnyRole('ROLE_CLIENT')")
     @PostMapping
-    public ResponseEntity<OrderDTO> insert(@Valid @RequestBody OrderDTO dto) { //inserindo um novo produto
+    public ResponseEntity<OrderDTO> insert(@Valid @RequestBody OrderDTO dto) { //inserindo uma nova order
         dto = service.insert(dto);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(dto.getId()).toUri();
 

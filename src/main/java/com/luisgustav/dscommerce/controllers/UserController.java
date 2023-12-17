@@ -21,7 +21,7 @@ public class UserController {
 
 
        @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_CLIENT')")
-       @GetMapping(value = "/me") //buscando os produtos por id
+       @GetMapping(value = "/me") //buscando user
        public ResponseEntity<UserDTO> getMe() {
            UserDTO dto = service.getMe();
            return ResponseEntity.ok(dto);
