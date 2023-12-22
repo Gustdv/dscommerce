@@ -1,11 +1,9 @@
 # DSCommerce Loja virtual
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/devsuperior/sds1-wmazoni/blob/master/LICENSE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/Gustdv/dscommerce/blob/main/LICENSE) 
 
 # Sobre o projeto
 
-https://wmazoni-sds1.netlify.app
-
-Aplicação API Rest DSCommerce tem como proposito de uma loja virtual, focado nas autenticações e autorizações das credenciais dos usuáros, com camadas de segurança. 
+API Rest DSCommerce é uma aplicação de uma loja virtual, focado nas autenticações e autorizações das credenciais dos usuáros, com camadas de segurança. 
 
 
 ## Layout web
@@ -21,6 +19,12 @@ Aplicação API Rest DSCommerce tem como proposito de uma loja virtual, focado n
 
 ## Modelo conceitual
 ![Modelo Conceitual](https://github.com/Gustdv/assets/blob/main/assets/modelo.png)
+
+## Camada de Segurança 
+![Web 2](https://github.com/Gustdv/assets/blob/main/assets/credenciais.png)
+![Web 2](https://github.com/Gustdv/assets/blob/main/assets/oauth2.png)
+
+
 
 # Tecnologias utilizadas
 ## Back end
